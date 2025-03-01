@@ -1,6 +1,6 @@
 # Garuda Journal Scraper
 
-This repository contains a Python project that scrapes journal data from the **Garuda Kemdikbud** website. The goal of this scraper is to automate the extraction of journal titles from the site and store them in a CSV file for further analysis. This README provides detailed instructions on how to set up and run the scraper, as well as an overview of the entire process.
+This repository contains a Python project that scrapes journal data from the **Garuda Kemdikbud** website. The goal of this scraper is to automate the extraction of journal titles from the site and store them in a CSV file for further analysis.
 
 ## Table of Contents
 
@@ -13,14 +13,32 @@ This repository contains a Python project that scrapes journal data from the **G
 
 ## Overview
 
-This project uses **Python** and libraries like **BeautifulSoup** and **requests** to scrape journal data from the **Garuda Kemdikbud** platform. The scraper is designed to extract the journal titles from multiple pages on the website and save them into a CSV file (`raw_data.csv`). The scraper dynamically detects the total number of pages to scrape, so it's ready for future updates when new journals are added.
+This project uses **Python** and libraries like **BeautifulSoup** and **requests** to scrape journal data from the **Garuda Kemdikbud** platform. The scraper is designed to automatically:
+
+- Extract journal titles from multiple pages.
+- Save them into a CSV file (`raw_data.csv`).
+- Dynamically detect the number of pages to scrape, ensuring future scalability for new journal entries.
+
+This project serves as a useful tool to collect and store journal data for further research or analysis.
 
 ## Dependencies
 
-Before running the scraper, you'll need to install the required dependencies. This can be done by setting up a virtual environment and installing the necessary packages via **pip**.
+In this section, you will find all the external libraries or dependencies required to run the project. Before starting the scraper, you need to install them. Here's what you need:
 
-1. Install **Python 3.x** if you haven't already.
-2. Create a virtual environment (recommended):
+1. **Python 3.x**: Make sure you have Python installed on your machine.
+2. **Required Libraries**: The project relies on the following libraries:
+   - `requests`: To send HTTP requests to the Garuda website and retrieve the HTML content.
+   - `beautifulsoup4`: To parse and extract journal titles from the HTML content.
+   - `csv`: To save the scraped data into a CSV file.
+   - `concurrent.futures`: To perform parallel scraping and speed up the process.
+
+To install all dependencies, follow these steps:
+
+1. **Create and activate a virtual environment**:
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+2. **Install the necessary libraries:
+   ```bash
+   pip install -r requirements.txt
+   
