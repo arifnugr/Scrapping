@@ -10,9 +10,6 @@ This repository contains a Python project that scrapes journal data from the **G
 4. [Setup Instructions](#setup-instructions)
 5. [Usage](#usage)
 6. [How the Scraper Works](#how-the-scraper-works)
-7. [Error Handling](#error-handling)
-8. [Contributing](#contributing)
-9. [License](#license)
 
 ## Overview
 
